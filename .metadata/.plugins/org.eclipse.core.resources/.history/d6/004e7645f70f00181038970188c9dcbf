@@ -1,0 +1,99 @@
+
+public class DigitsToWords {
+
+	public static void main(String[] args) {
+		
+		int number = 33;
+		
+		TurnDigitsIntoWords(number);
+
+	}
+
+	public static void TurnDigitsIntoWords(int num) {
+		
+		boolean teen = false;
+		int[] numArray = {0,0};
+		int dig1 = num/10;
+		int dig2 = num%10;
+		numArray[0] = dig1;
+		numArray[1] = dig2;
+		
+			switch (dig1) {
+			case 1 : teen = true;
+			break;
+			case 2 : System.out.print("Twenty ");
+			break;
+			case 3 : System.out.print("Thirty ");
+			break;
+			case 4 : System.out.print("Forty ");
+			break;
+			case 5 : System.out.print("Fifty ");
+			break;
+			case 6 : System.out.print("Sixty ");
+			break;
+			case 7 : System.out.print("Seventy ");
+			break;
+			case 8 : System.out.print("Eighty ");
+			break;
+			case 9 : System.out.print("Ninety ");
+			break;
+		}
+			System.out.print("");
+			
+			switch (dig2) {
+			case 1 : switch(dig1) {
+			case 1 : break;
+			default : System.out.print("One");
+			}
+			break;
+			case 2 : switch(dig1) {
+			case 1 : break;
+			default : System.out.print("Two");
+			}
+			break;
+			case 3 : switch(dig1) {
+			case 1 : break;
+			default : System.out.print("Three");
+			}
+			break;
+			case 4 : System.out.print("Four");
+			break;
+			case 5 : switch(dig1) {
+			case 1 : break;
+			default : System.out.print("Five");
+			}
+			break;
+			case 6 : System.out.print("Six");
+			break;
+			case 7 : System.out.print("Seven");
+			break;
+			case 8 : System.out.print("Eight");
+			break;
+			case 9 : System.out.print("Nine");
+			break;
+		}
+		if (teen) {
+			switch (dig2) {
+			case 1 : System.out.print("Eleven");
+			break;
+			case 2 : System.out.print("Twelve");
+			break;
+			case 3 : System.out.print("Thirteen");
+			break;
+			case 4 : System.out.print("teen");
+			break;
+			case 5 : System.out.print("Fifteen");
+			break;
+			case 6 : System.out.print("teen");
+			break;
+			case 7 : System.out.print("teen");
+			break;
+			case 8 : System.out.print("teen");
+			break;
+			case 9 : System.out.print("teen");
+			break;
+			
+			}
+		}
+	}
+}

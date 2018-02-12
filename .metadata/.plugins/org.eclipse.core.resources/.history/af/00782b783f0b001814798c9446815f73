@@ -1,0 +1,13 @@
+
+public class People {
+		public String name;
+		public String job;
+		public int age;
+		
+		public Person(String name, String job, int age) {
+			this.name = name;
+			this.job = job;
+			this.age = age;
+	}
+
+}

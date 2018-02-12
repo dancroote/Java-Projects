@@ -1,0 +1,15 @@
+
+public class Main {
+
+	public void main(String[] args) {
+		String exampleMessage = "Hello World!";
+		inputParameter();
+	}
+
+	{
+	static String inputParameter() {
+		return exampleMessage ;
+	}
+
+}
+}	

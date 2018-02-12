@@ -1,0 +1,21 @@
+
+public class Lvl2TooHot {
+
+	public static void main(String[] args) {
+		int temperature = 50;
+		boolean isSummer = true;
+
+		if (trueOrFalse(temperature, isSummer)) {
+			System.out.println("True!");
+		} else {
+			System.out.println("False!");
+		}
+	}
+	
+	public static boolean trueOrFalse(int temperature, boolean isSummer) {
+		if (temperate > 59 & temperature <91)
+			return true
+	}
+
+	
+}

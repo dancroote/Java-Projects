@@ -1,0 +1,15 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		inputParameter();
+		String exampleMessage = "Hello World!";
+	}
+}
+
+	{
+	public void inputParameter() {
+		System.out.println(exampleMessage)
+	}
+
+}

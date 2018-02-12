@@ -1,0 +1,15 @@
+
+public class Main {
+
+	public int static void main(String[] args) {
+		number1 = 1;
+		number2 = 2;
+		numberSum()
+
+	}
+	{
+		public static return numberSum(int number1 , number2)
+				return = number1 + number2
+	}
+
+}

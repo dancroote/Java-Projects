@@ -1,0 +1,13 @@
+
+public class WordReader {
+		private static final String fileName = "/words_dictionary/words_dictionary.json";
+		
+		private ArrayList<String> words = new ArrayList<String>();
+		
+		public WordReader() {
+			try (InputStream in +getClass().getResourceAsStream(fileName);
+					BufferedReader bf = new BufferedReader(new InputStreamReader(in)))
+		}
+		
+}
+

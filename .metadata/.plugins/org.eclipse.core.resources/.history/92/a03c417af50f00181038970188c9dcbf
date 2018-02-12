@@ -1,0 +1,65 @@
+
+public class DigitsToWords {
+
+	public static void main(String[] args) {
+		
+		int number = 16;
+		
+		TurnDigitsIntoWords(number);
+
+	}
+
+	public static void TurnDigitsIntoWords(int num) {
+		
+		boolean teen = false;
+		int[] numArray = {0,0};
+		int dig1 = num/10;
+		int dig2 = num%10;
+		numArray[0] = dig1;
+		numArray[1] = dig2;
+		
+			switch (dig1) {
+			case 1 : teen = true;
+			break;
+			case 2 : System.out.print("Twenty ");
+			break;
+			case 3 : System.out.print("Thirty ");
+			break;
+			case 4 : System.out.print("Forty ");
+			break;
+			case 5 : System.out.print("Fifty ");
+			break;
+			case 6 : System.out.print("Sixty ");
+			break;
+			case 7 : System.out.print("Seventy ");
+			break;
+			case 8 : System.out.print("Eighty ");
+			break;
+			case 9 : System.out.print("Ninety ");
+			break;
+		}
+			switch (dig2) {
+			case 1 : System.out.println("One");
+			break;
+			case 2 : System.out.println("Two");
+			break;
+			case 3 : System.out.println("Three");
+			break;
+			case 4 : System.out.println("Four");
+			break;
+			case 5 : System.out.println("Five");
+			break;
+			case 6 : System.out.println("Six");
+			break;
+			case 7 : System.out.println("Seven");
+			break;
+			case 8 : System.out.println("Eight");
+			break;
+			case 9 : System.out.println("Nine");
+			break;
+		}
+		if (teen) {
+			System.out.println("teen");
+		}
+	}
+}

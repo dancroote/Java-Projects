@@ -1,0 +1,17 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		int integerOne = 1;
+		int integerTwo = 2;
+		numberSum(integerOne,integerTwo);
+
+	}
+	{
+		public static return int numberSum(num1, num2) {
+				num3 = num1 + num2
+				return = num3
+	}
+
+}
+}

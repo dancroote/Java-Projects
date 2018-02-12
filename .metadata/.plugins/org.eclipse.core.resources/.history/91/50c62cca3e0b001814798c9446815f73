@@ -1,0 +1,15 @@
+
+public class Lvl2People {
+
+	public static void main(String[] args) {
+		callDetails ()
+	}
+		
+		public class Person {
+			public String name;
+			public String job;
+			public int age;
+			public Person(String name, String job, int age)
+		}
+		Person a = new Person(Dave, Butcher, 42)
+	}

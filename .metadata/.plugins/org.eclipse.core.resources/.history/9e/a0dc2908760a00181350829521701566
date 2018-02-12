@@ -1,0 +1,10 @@
+
+public class Main {
+
+	public static void main(String[] exampleMessage) {
+		// TODO Auto-generated method stub
+		exampleMessage = string("Hello World!")
+		System.out.println(exampleMessage);
+	}
+
+}

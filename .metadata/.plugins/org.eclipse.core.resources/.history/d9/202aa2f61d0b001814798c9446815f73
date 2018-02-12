@@ -1,0 +1,24 @@
+
+public class Lvl2Blackjack {
+
+	public static void main(String[] args) {
+		String output;
+		int card1 = 12;
+		int card2 = 11;
+		
+		System.out.println(closestTo21(card1, card2));
+	}
+	private static String closestTo21(int firstNum, int secondNum) {
+		firstNum = 21 - firstNum;
+		secondNum = 21 - secondNum;
+		
+		if (firstNum+21 > 11 && secondNum+21 > 11) {
+		if (firstNum < secondNum) {
+			return ("Card One is closer to 21!");
+		} else {
+			return ("Card Two is closer to 21!");} 
+		}else {
+			return ("Invalid card input");
+		}
+	}
+}

@@ -1,0 +1,15 @@
+public class Main {
+
+	public static void main(String[] args) {
+		boolean sumOrMult = true
+		int integerOne = 1;
+		int integerTwo = 2;
+		numberSum(integerOne,integerTwo);
+		System.out.println(numberSum(integerOne,integerTwo, sumOrMult));
+	}
+
+		public static int numberSum(int num1, int num2, boolean trueorfalse) {
+			return num1 + num2 ;
+		}
+
+}

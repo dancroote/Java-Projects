@@ -1,0 +1,12 @@
+
+public class Lvl1IterationAndArrays2 {
+
+	public static void main(String[] args) {
+		int[] arrayOfInts = new int[10];
+		for (int counter = 0; counter < 10; counter++) { 
+			arrayOfInts[counter] == counter;
+			System.out.println(arrayOfInts[counter]);
+		}
+	}
+
+}

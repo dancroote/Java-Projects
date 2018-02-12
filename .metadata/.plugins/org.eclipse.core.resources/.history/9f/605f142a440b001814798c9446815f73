@@ -1,0 +1,13 @@
+
+public class Lvl2People {
+
+	public static void main(String[] args) {
+		People person1 = new People("Eric", "Butcher", 42);
+		People person2 = new People("Boris", "Bus Driver", 36);
+		People person3 = new People("Horace", "Teacher", 33);
+		
+		System.out.println(person1.toString());
+		System.out.println(person2.toString());
+		System.out.println(person3.toString());
+	}
+}

@@ -1,0 +1,14 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		Results Peter = new Results();
+		Peter.Physics(170);
+		Peter.Chemistry(130);
+		Peter.Maths(85);
+		
+		Peter.ShowResults();
+
+	}
+
+}

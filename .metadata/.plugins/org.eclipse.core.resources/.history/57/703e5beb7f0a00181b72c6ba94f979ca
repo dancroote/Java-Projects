@@ -1,0 +1,11 @@
+public class Main {
+	
+	public static void main(String[] args) {
+		returnHelloWorld();
+	}
+
+	public static void returnHelloWorld() {
+		System.out.println(message);
+	}
+
+}	

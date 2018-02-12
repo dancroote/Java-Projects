@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class Lvl2People {
+	
+	static ArrayList<Object> roster = new ArrayList<Object>();
+
+	public static void main(String[] args) {
+		People person1 = new People("Eric", "Butcher", 42);
+		People person2 = new People("Boris", "Bus Driver", 36);
+		People person3 = new People("Horace", "Teacher", 33);
+		
+		roster.add(person1);
+		roster.add(person2);
+		roster.add(person3);
+		
+		int rosterLength = roster.size();
+		for (int i = 0; i < rosterLength; i++) {
+			System.out.println(roster.get(1));
+			System.out.println(roster.get(2);
+		}
+	}
+}

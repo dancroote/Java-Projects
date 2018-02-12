@@ -1,0 +1,15 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		Results Ahmed = new Results();
+		
+		Ahmed.Physics(140);			//marks out of 150
+		Ahmed.Chemistry(70);		//marks out of 150
+		Ahmed.Maths(70);			//marks out of 150
+		
+		Ahmed.ShowResults();
+
+	}
+
+}

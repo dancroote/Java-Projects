@@ -1,0 +1,12 @@
+	
+public static String exampleMessage = "Hello World!";
+	
+	public static void main(String[] args) {
+		exampleMessage = "Hello World!";
+		inputParameter();
+	}
+
+	public static String inputParameter() {
+		return exampleMessage ;
+	}
+

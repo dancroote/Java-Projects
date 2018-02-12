@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class Lvl2Garage {
+
+   public static void main(String args[]) {
+      Vehicle v1 = new Vehicle(10, 200, "Green");   // Vehicle reference and object
+      Vehicle v2 = new Car(13, 180, "Blue", false);   // Vehicle reference but Car object
+      Vehicle v3 = new Motorcycle(4, 70, "Black", "125cc");   // Vehicle reference and object
+      Vehicle v4 = new Lorry(8, 670, "Grey", 12);
+      
+      v1.move();   // runs the method in Vehicle class
+      v2.move();   // runs the method in Car class
+      
+      
+      ArrayList<Vehicle> vehicleArray = new ArrayList<>();
+      
+      vehicleArray.add(v1);
+      vehicleArray.add(v2);
+      vehicleArray.add(v3);
+      vehicleArray.add(v4);
+      
+      int vehiclesInStock = vehicleArray.size();
+      
+      VehiclePrices(vehiclesInStock);
+      
+      System.out.println(vehicleArray);
+   }
+
+private static void VehiclePrices(int vehiclesInStock) {
+	for (int i=0;i<vehiclesInStock;i++)
+	
+}
+}

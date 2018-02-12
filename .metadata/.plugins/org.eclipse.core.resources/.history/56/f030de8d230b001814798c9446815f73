@@ -1,0 +1,13 @@
+
+public class Lvl2TooHot {
+
+	public static void main(String[] args) {
+		temperature = 50;
+		isSummer = true;
+
+		if (temperate > 59 & temperature <91)
+			return true
+	}
+
+	
+}

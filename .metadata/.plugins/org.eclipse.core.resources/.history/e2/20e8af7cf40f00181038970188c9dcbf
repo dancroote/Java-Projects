@@ -1,0 +1,35 @@
+
+public class DigitsToWords {
+
+	public static void main(String[] args) {
+		
+		int number = 25;
+		
+		TurnDigitsIntoWords(number);
+
+	}
+
+	public static void TurnDigitsIntoWords(int num) {
+		
+		int[] numArray = {0,0};
+		int dig1 = num/10;
+		int dig2 = num%10;
+		numArray[0] = dig1;
+		numArray[1] = dig2;
+		
+		for (int i=0;i<2;i++) {
+			switch (dig1) {
+			case 1 : System.out.println("One");
+			case 2 : System.out.println("Two");
+			case 3 : System.out.println("Three");
+			case 4 : System.out.println("Four");
+			case 5 : System.out.println("Five");
+			case 6 : System.out.println("Six");
+			case 7 : System.out.println("Seven");
+			case 8 : System.out.println("Eight");
+			case 9 : System.out.println("Nine");
+			}
+		}
+		
+	}
+}

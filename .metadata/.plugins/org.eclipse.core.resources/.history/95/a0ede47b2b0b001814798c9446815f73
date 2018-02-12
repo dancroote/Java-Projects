@@ -1,0 +1,23 @@
+
+public class Lvl2People {
+
+	public static void main(String[] args) {
+
+	}
+
+	public class Person {
+		String personName = "Bob";
+		int personAge = 33;
+		String jobTitle = "Butcher";
+	}
+	
+	public void returnInfo(String name, String job, int age) {
+
+		System.out.printf("Name: %s%n", name);
+		System.out.printf("Name: %s%n", job);
+		System.out.printf("Name: %s%n", age);
+
+
+	}
+	
+}
