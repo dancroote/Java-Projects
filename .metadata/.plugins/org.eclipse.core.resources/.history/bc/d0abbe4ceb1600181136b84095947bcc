@@ -1,0 +1,108 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.function.ToIntFunction;
+
+public class Lvl2Garage {
+
+   public static void main(String args[]) {
+	   
+	   Scanner scanner = new Scanner(System.in);
+	   
+      Vehicle v1 = new Car(10, 200, "Green", true);   // Vehicle reference and object
+      Vehicle v2 = new Car(13, 180, "Blue", false);   // Vehicle reference but Car object
+      Vehicle v3 = new Motorcycle(4, 70, "Black", "125cc");   // Vehicle reference and object
+      Vehicle v4 = new Lorry(8, 670, "Grey", 12);
+      
+      v1.move();   // runs the method in Vehicle class
+      v2.move();   // runs the method in Car class
+      
+      
+      ArrayList<Vehicle> vehicleArray = new ArrayList<>();
+      
+      vehicleArray.add(v1);
+      vehicleArray.add(v2);
+      vehicleArray.add(v3);
+      vehicleArray.add(v4);
+      
+      String v= v1.name;
+      
+      for (int i=2; i >1;) {
+      System.out.println("What would you like to do?");
+      System.out.println("---Try List/Add--- ");
+      String actionChoice = scanner.nextLine();
+      switch (actionChoice) {
+      case "List" : case "list" : case "LIST" : case "l" : case "L" : PrintList(vehicleArray);
+      break;
+      case "Add" : case "add" : case "ADD" : case "a" : case "A" : AddVehicle(vehicleArray, scanner); 
+      for (int q=0;q<vehicleArray.size();q++) {
+    	  System.out.println(vehicleArray.get(i));
+      }
+      break;
+      }
+      }
+      scanner.close();
+   }
+   
+   public static int BillCalc(Object vehicle, String name, int age, int weight, String special) {
+	   int typeDependantVar = 0; 
+	   switch(name) {
+	   case "Car" : switch(special) {
+	   case "true" : typeDependantVar = 125; break;
+	   }
+	   case "Motorcycle" : switch(special) {
+	   case "125cc" : typeDependantVar = 130;  break;
+	   }
+	   case "Lorry" : switch(special) {
+	   case "12" : typeDependantVar = 10;  break;
+	   }
+	   }
+	   
+	   int bill = (age + weight) * typeDependantVar;
+	   return bill;
+   }
+   
+   public static void AddVehicle(ArrayList vehicleArray, Scanner scanner) {
+	   
+	   System.out.println("What kind of vehicle would you like to add? <<Car,Motorcycle,Lorry>>");
+	   String newVType = scanner.nextLine();
+	   System.out.println("How many years old is this " + newVType + "?");
+	   String newVAge = scanner.nextLine();
+	   System.out.println("How much does this " + newVAge + " year old " + newVType + " weigh? <<Kg>>");
+	   String newVWeight = scanner.nextLine();
+	   System.out.println("What colour is this " + newVAge + " year old " + newVType + "?");
+	   String newVColour = scanner.nextLine();
+	   boolean autoTruth = false;
+	   int newVWheels = 0;
+	   String newVEngine = null;
+	   switch (newVType) {
+	   case "car" : case "Car" : case "CAR" : System.out.println("Is this " + newVType + " automatic?");
+	   				String newVAuto = scanner.nextLine();
+	   				switch (String.valueOf(newVAuto)) {
+	   				case "true" : case "True" : case "TRUE" : case "yes" : case "Yes" : case "YES" : case "Y" : case "y" : autoTruth = true; break;
+	   				case "false" : case "False" : case "FALSE" : case "no" : case "No" : case "NO" : case "N" : case "n" : autoTruth = false; break;
+	   				} break;
+	   case "Motorcycle" : case "motorcycle" : case "MOTORCYCLE" : case "Bike" : case "bike"  : case "BIKE" : System.out.println("How large is this" + newVType + "'s engine? <<cc>>");
+			newVEngine = scanner.nextLine();
+			newVEngine = String.valueOf(newVEngine); break; 	
+	   case "lorry" : case "Lorry" : case "LORRY" : System.out.println("How many wheels does this" + newVType + " have?");
+	   		newVWheels = scanner.nextInt();	
+	   }
+	   System.out.println("Please give this " + newVType + " a new ID reference number");
+	   int newVID = scanner.nextInt();
+	   	   
+	   switch (newVType) {
+	   case "car" : case "Car" : case "CAR" : Vehicle newC = new Car(Integer.parseInt(newVAge), Integer.parseInt(newVWeight), newVColour, autoTruth);  break;
+	   case "Motorcycle" : case "motorcycle" : case "MOTORCYCLE" : case "Bike" : case "bike"  : case "BIKE" : Vehicle newM = new Motorcycle(Integer.parseInt(newVAge), Integer.parseInt(newVWeight), newVColour, newVEngine); break;
+	   case "lorry" : case "Lorry" : case "LORRY" : Vehicle newL = new Lorry(Integer.parseInt(newVAge), Integer.parseInt(newVWeight), newVColour, newVWheels); break;
+	   }
+   }
+   public static void PrintList (ArrayList vehicleArray) {
+	   for (int i=0;i<vehicleArray.size();i++) {
+	    	  // System.out.println(vehicleArray.get(i));
+	    	  //System.out.println( String.valueOf((vehicleArray.get(i)).returnSpecial()));
+	    	  System.out.println("Vehicle Type: " + ((Vehicle) vehicleArray.get(i)).returnColour() + " " + vehicleArray.get(i).getClass().getName());
+	    	  System.out.println("Price: ");
+	    	  System.out.println( "£" + BillCalc(vehicleArray.get(i),vehicleArray.get(i).getClass().getName(),((Vehicle) vehicleArray.get(i)).returnAge(),((Vehicle) vehicleArray.get(i)).returnWeight(), String.valueOf(((Vehicle) vehicleArray.get(i)).returnSpecial())) );
+	      }
+   }
+}

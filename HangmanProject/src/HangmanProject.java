@@ -16,7 +16,7 @@ public class HangmanProject {
 		Scanner reader = new Scanner(System.in);
 		
 		String[] gallowsArray = {("  _________    "),("|         |    "),("|         0    "),("|        /|\\  "),("|        / \\  "),("|              "),("|              "),("|______________")};
-		Scanner s = new Scanner(new File("C:\\Users\\Admin\\eclipse-workspace\\words_dictionary\\words.txt"));
+		Scanner s = new Scanner(new File("C:\\Users\\Admin\\eclipse-workspace\\words.txt"));
 			
 				ArrayList<String> wordList = new ArrayList<String>();
 					while (s.hasNext()) {
@@ -51,8 +51,8 @@ public class HangmanProject {
 					
 					System.out.println("");
 					String guess = GuessEntry(reader);
-					PrintGallows(lives, gallowsArray);
 					CorrectGuesses(actualWord, guess, wordSpace, underscoresNeeded);
+					PrintGallows(lives, gallowsArray);
 					Reprint(underscoresNeeded, wordSpace);
 					} while  (lives > 0 && (!Arrays.equals(wordSpace, actualWord)));
 					
@@ -115,7 +115,7 @@ public class HangmanProject {
 		   for (int l = 1; l < lifeNumber+1; l++) {
 			   System.out.println();
 		   }
-	   for (int k = lifeNumber; k < lifeNumber+1;k++) {
+	   for (int k = lifeNumber; k < 8;k++) {
 		   System.out.println(arrayOfGallows[k]);
 		}
 	}
