@@ -83,7 +83,7 @@ class Lorry extends Vehicle {
 	String name = "Lorry";
 	int wheels;
 	
-	Lorry(int age, int weight, String colour, int ID, int wheels) {
+	Lorry(int age, int weight, String colour, int wheels, int ID) {
 	      super(age, weight, colour, ID);
 	      this.wheels = wheels;
 	   }
