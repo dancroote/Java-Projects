@@ -68,8 +68,17 @@ public class Lvl2WorkingWithFiles {
 	      } catch(Exception e) {
 	         e.printStackTrace();
 	      }
-	      for(int k=0;k<newArray.size();k++) {
+	      PrintNewArray(newArray);
+	}
+	public static String[] PrintNewArray(ArrayList newArray) {
+		String[] output = new String[newArray.size()];
+		for(int k=0;k<newArray.size();k++) {
 	    	  System.out.println(newArray.get(k).toString());
+	    	  output[k] = String.valueOf(newArray.get(k));
 	      }
+		return output;
+	}
+	public int Parse(String string1) {
+	return Integer.parseInt(string1);
 	}
 }

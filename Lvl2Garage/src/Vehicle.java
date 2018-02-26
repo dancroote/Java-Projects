@@ -1,21 +1,16 @@
-abstract class Vehicle {
+class Vehicle {
 	String name = "Vehicle";
 	int age;
 	int weight;
 	String colour;
-	int ID;
 
-	   Vehicle(int age, int weight, String colour, int ID) {
+	   Vehicle(int age, int weight, String colour) {
 	      this.age = age; 
 	      this.weight = weight;
 	      this.colour = colour;
-	      this.ID = ID;
 	   }
 	   public void move() {
 		      System.out.println("Vehicles!");
-		   }
-	   public int returnID() {
-		   return this.ID;
 		   }
 	   public String toString() {
 		   return this.name;
@@ -26,9 +21,6 @@ abstract class Vehicle {
 	   public int returnWeight() {
 		   return this.weight;
 	   }
-	   public String returnColour() {
-		   return this.colour;
-	   }
 	   public String returnSpecial() {
 		   return "NoSpecial";
 	   }
@@ -38,17 +30,14 @@ class Car extends Vehicle {
 	String name = "Car";
 	boolean isAutomatic;
 	
-	public Car(int age, int weight, String colour, boolean isAutomatic, int ID) {
-	      super(age, weight, colour, ID);
+	Car(int age, int weight, String colour, boolean isAutomatic) {
+	      super(age, weight, colour);
 	      this.isAutomatic = isAutomatic;
 	      
 	   }
    public void move() {
       System.out.println("Cars!");
    }
-   public int returnID() {
-	   return this.ID;
-	   }
    public String toString() {
 	   return this.name;
    }
@@ -61,16 +50,13 @@ class Motorcycle extends Vehicle {
 	String name = "Motorcycle";
 	String engineSize;
 	
-	Motorcycle(int age, int weight, String colour, String engineSize, int ID) {
-	      super(age, weight, colour, ID);
+	Motorcycle(int age, int weight, String colour, String engineSize) {
+	      super(age, weight, colour);
 	      this.engineSize = engineSize;
 	   }
    public void move() {
       System.out.println("Motorcycles!");
    }
-   public int returnID() {
-	   return this.ID;
-	   }
    public String toString() {
 	    return this.name;
    }
@@ -83,16 +69,13 @@ class Lorry extends Vehicle {
 	String name = "Lorry";
 	int wheels;
 	
-	Lorry(int age, int weight, String colour, int wheels, int ID) {
-	      super(age, weight, colour, ID);
+	Lorry(int age, int weight, String colour, int wheels) {
+	      super(age, weight, colour);
 	      this.wheels = wheels;
 	   }
    public void move() {
       System.out.println("Lorries!");
    }
-   public int returnID() {
-	   return this.ID;
-	   }
    public String toString() {
 	   return this.name;
    }
@@ -100,4 +83,3 @@ class Lorry extends Vehicle {
 	   return String.valueOf(this.wheels);
    }
 }
-
